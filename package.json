@@ -1,7 +1,7 @@
 {
   "name": "meon",
   "version": "8.0.0",
-  "description": "Automated whatsapp md bot created using nodejs and baileys lib",
+  "description": "meon",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {

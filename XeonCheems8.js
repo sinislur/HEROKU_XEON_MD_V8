@@ -1524,25 +1524,25 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 ╔════════════════════════•| ✿ |•
 │[ 𝙇𝙄𝙎𝙏 𝙈𝙀𝙉𝙐 ] > 🐼
 ╚═════════════
-│❏.allmenu 👍
-│❏.downloadmenu 👍
-│❏.funmenu 👍
-│❏.aimenu 👍
-│❏.groupmenu 👍
-│❏.ownermenu 👍
-│❏.photooxymenu 👍
-│❏.textpromenu 👍
-│❏.ephoto360menu 👍
-│❏.animemenu 👍
-│❏.nsfwmenu 👍
-│❏.randomphotomenu 👍
-│❏.randomvideomenu 👍
-│❏.stickermenu 👍
-│❏.databasemenu 👍
-│❏.stalkermenu 👍
-│❏.bugmenu 👍
-│❏.othermenu 👍
-│❏.soundmenu 👍
+│❏.allmenu 🔥
+│❏.downloadmenu 📥
+│❏.funmenu 😆
+│❏.aimenu 🤖
+│❏.groupmenu 👤
+│❏.ownermenu 😎
+│❏.photooxymenu 📸
+│❏.textpromenu 📡
+│❏.ephoto360menu 📺
+│❏.animemenu 🈂️
+│❏.nsfwmenu 🔞
+│❏.randomphotomenu 🗿
+│❏.randomvideomenu 🧽
+│❏.stickermenu 🎭
+│❏.databasemenu 🧸
+│❏.stalkermenu 🧿
+│❏.bugmenu 🔮
+│❏.othermenu 🎃
+│❏.soundmenu 🎶
 ╚════════════════════════•| ✿ |•`
             let ments = [ownernya, me, mark]        
            XeonBotInc.sendMessage(from, { 
@@ -1693,9 +1693,12 @@ case 'allmenu': {
 ╭––『 Download Menu 』
 ┆❏.ytsearch 🅕
 ┆❏.play 🅕
+┆❏.musik 🅕
+┆❏.song 🅕
 ┆❏.ytmp3 🅕
 ┆❏.ytmp4 🅕
 ┆❏.tiktok 🅕
+┆❏.tt 🅕
 ┆❏.tiktokmp3 🅕
 ┆❏.tiktokaudio 🅕
 ┆❏.google 🅕
@@ -1739,6 +1742,7 @@ case 'allmenu': {
 ┆❏.ai 🅕
 ┆❏.aimage 🅕
 ┆❏.remini 🅕
+┆❏.hd 🅕
 ╰–––––––––––––––༓
 
 ╭––『 Fun Menu 』
@@ -2479,9 +2483,12 @@ case 'downloadmenu': {
 ╚═════════════
 ┆❏.ytsearch 🅕
 ┆❏.play 🅕
+┆❏.musik 🅕
+┆❏.song 🅕
 ┆❏.ytmp3 🅕
 ┆❏.ytmp4 🅕
 ┆❏.tiktok 🅕
+┆❏.tt 🅕
 ┆❏.tiktokmp3 🅕
 ┆❏.tiktokaudio 🅕
 ┆❏.google 🅕
@@ -2700,6 +2707,7 @@ case 'aimenu': {
 ┆❏.ai 🅕
 ┆❏.aimage 🅕
 ┆❏.remini 🅕
+┆❏.hd 🅕
 ╚════════════════════════•| ✿ |•`
             let ments = [ownernya, me, mark]        
            XeonBotInc.sendMessage(from, { 
@@ -5636,7 +5644,7 @@ let db = await dBinary(`${q}`)
 replygcxeon(db)
 }
 break
-case 'remini': {
+case 'remini': case 'hd': {
 			if (!quoted) return replygcxeon(`Where is the picture?`)
 			if (!/image/.test(mime)) return replygcxeon(`Send/Reply Photos With Captions ${prefix + command}`)
 			XeonStickWait()
@@ -5764,7 +5772,7 @@ XeonBotInc.sendMessage(m.chat, { image : eek, caption: ngen }, { quoted: m})
 break
 
 
-case 'tiktok':{
+case 'tiktok': case 'tt': {
 if (!text) return m.reply( `Example : ${prefix + command} link`)
 if (!q.includes('tiktok')) return m.reply(`Link Invalid!!`)
 XeonStickWait()
@@ -5788,8 +5796,9 @@ break
 
 
 
-case 'play':  case 'song': {
+case 'play': case 'musik': case 'song': {
 if (!text) return replygcxeon(`Contoh : ${prefix + command} anime whatsapp status`)
+XeonStickWait()
 const xeonplaymp3 = require('./lib/ytdl2')
 let yts = require("youtube-yts")
         let search = await yts(text)
@@ -5816,6 +5825,7 @@ break
 case "ytmp3": case "ytaudio": //credit: Ray Senpai â¤ï¸ https://github.com/EternityBots/Nezuko
 const xeonaudp3 = require('./lib/ytdl2')
 if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) return replygcxeon(`Where's the yt link?\nContoh: ${prefix + command} https://youtube.com/shorts/YQf-vMjDuKY?feature=share`)
+XeonStickWait()
 const audio=await xeonaudp3.mp3(text)
 await XeonBotInc.sendMessage(m.chat,{
     audio: fs.readFileSync(audio.path),
@@ -5836,6 +5846,7 @@ break
 case 'ytmp4': case 'ytvideo': {
 const xeonvidoh = require('./lib/ytdl2')
 if (args.length < 1 || !isUrl(text) || !xeonvidoh.isYTUrl(text)) replygcxeon(`Url Link Nya mana Kak??\n\nContoh : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
+XeonStickWait()
 const vid=await xeonvidoh.mp4(text)
 const ytc=`
 *${themeemoji}Tittle:* ${vid.title}
