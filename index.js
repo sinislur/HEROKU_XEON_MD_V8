@@ -46,6 +46,10 @@ const owner = JSON.parse(fs.readFileSync('./database/owner.json'))
 
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
+///
+process.on('uncaughtException', console.error)
+///
+
 require('./XeonCheems8.js')
 nocache('../XeonCheems8.js', module => console.log(color('[ CHANGE ]', 'green'), color(`'${module}'`, 'green'), 'Updated'))
 require('./index.js')
