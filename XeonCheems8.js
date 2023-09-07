@@ -5845,7 +5845,6 @@ await fs.unlinkSync(audio.path)
 break
 case 'ytmp4': case 'ytvideo': {
 const xeonvidoh = require('./lib/ytdl2')
-	XeonStickWait()
 if (args.length < 1 || !isUrl(text) || !xeonvidoh.isYTUrl(text)) replygcxeon(`Url Link Nya mana Kak??\n\nContoh : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
 const vid=await xeonvidoh.mp4(text)
 const ytc=`
