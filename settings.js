@@ -2,8 +2,8 @@ const chalk = require("chalk")
 const fs = require("fs")
 
 //aumto presence update
-global.autoTyping = false //auto tying in gc (true to on, false to off)
-global.autoRecord = true //auto recording (true to on, false to off)
+global.autoTyping = true //auto tying in gc (true to on, false to off)
+global.autoRecord = false //auto recording (true to on, false to off)
 global.autoblockmorroco = true //auto block 212 (true to on, false to off)
 global.autokickmorroco = true //auto kick 212 (true to on, false to off) 
 global.antispam = true //auto kick spammer (true to on, false to off)
@@ -29,7 +29,7 @@ global.socialm = "GitHub: botzexx" //ur github or insta name
 global.location = "Indonesia, Bandung, Jabar" //ur location
 
 //new
-global.botname = "W I L Y - MD"
+global.botname = "CabulBot"
 global.ownernumber = '6289688206739'
 global.ownername = 'W I L Y - K U N'
 global.ownerNumber = ["6289688206739@s.whatsapp.net"]
@@ -38,9 +38,9 @@ global.websitex = "https://chat.whatsapp.com/LTYOWwDQ9xuHMQtCuGOEn4"
 global.wagc = "https://chat.whatsapp.com/LTYOWwDQ9xuHMQtCuGOEn4"
 global.themeemoji = '🪀'
 global.wm = "Bot Inc."
-global.botscript = 'By > Wily Kun' //script link
+global.botscript = 'By > CabulBot' //script link
 global.packname = "Sticker By"
-global.author = "W I L Y - K U N\n\n"
+global.author = "R I V A N\n\n"
 global.creator = "6289688206739@s.whatsapp.net"
 global.prefa = ['','!','.','#','&']
 global.sessionName = 'session'
